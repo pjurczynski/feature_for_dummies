@@ -1,0 +1,12 @@
+defaults: &defaults
+  sample_feature: true
+development:
+  <<: *defaults
+test:
+  <<: *defaults
+staging:
+  <<: *defaults
+  sample_feature: false
+production:
+  <<: *defaults
+  sample_feature: false
