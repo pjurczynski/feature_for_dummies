@@ -1,8 +1,10 @@
-# FeatureForDummies
+FeatureForDummies
+=================
 
-TODO: Write a gem description
+It is a very simple and straight forward implementation of feature flags. You define new features in a yml file which then you can easily reference.
 
-## Installation
+Installation
+------------
 
 Add this line to your application's Gemfile:
 
@@ -12,15 +14,23 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+--
 
-    $ gem install feature_for_dummies
+run:
 
-## Usage
+    $ rake feature_for_dummies:install
 
-TODO: Write usage instructions here
+to generate sample features list at `config/feature_for_dummies.yml`
 
-## Contributing
+Usage
+-----
+
+Set proper features at `config/feature_for_dummies.yml`.
+Then to test if a feature is set for current environment
+    Feature.on?('my_new_extreme_feature')
+
+Contributing
+------------
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
