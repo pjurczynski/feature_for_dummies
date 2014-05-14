@@ -9,7 +9,8 @@ module FeatureForDummies
     rake_tasks do
       load "tasks/install.rake"
     end
+    config.after_initialize do
+      Feature = FeatureForDummies::Feature unless defined?(Feature)
+    end
   end
 end
-
-Feature = FeatureForDummies::Feature unless defined?(Feature)
