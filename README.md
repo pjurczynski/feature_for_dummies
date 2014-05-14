@@ -28,7 +28,15 @@ Usage
 Set proper features at `config/feature_for_dummies.yml`.
 Then to test if a feature is set for current environment
 
-    Feature.on?('my_new_extreme_feature')
+    if Feature.on?('my_new_extreme_feature')
+      do_extreme_things
+    else
+      do_things_less_extreme
+    end
+
+If you already have a class with a name `Feature` Then you will need to prepend the namespace:
+
+    FeatureForDummies::Feature.on?('my_new_extreme_feature')
 
 Contributing
 ------------
