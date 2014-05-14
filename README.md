@@ -27,6 +27,7 @@ Usage
 
 Set proper features at `config/feature_for_dummies.yml`.
 Then to test if a feature is set for current environment
+
     Feature.on?('my_new_extreme_feature')
 
 Contributing
